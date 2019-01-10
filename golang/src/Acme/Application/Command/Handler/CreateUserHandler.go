@@ -18,7 +18,7 @@ func NewCreateUserHandler(users Users) *CreateUserHandler {
 
 func (handler *CreateUserHandler) Handle(command Command) error {
 	createUserCommand := command.(*CreateUserCommand)
-	if handler.users.Exists("john@doe.com") {
+	if handler.users.Exists(createUserCommand.Email()) {
 		return errors.New("current user exists")
 	}
 
