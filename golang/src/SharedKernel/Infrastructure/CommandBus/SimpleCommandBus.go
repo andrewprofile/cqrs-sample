@@ -15,6 +15,6 @@ func (commandBus *SimpleCommandBus) RegisterHandler(command Command, handler Han
 	commandBus.handlers[reflect.TypeOf(command).String()] = handler
 }
 
-func (commandBus *SimpleCommandBus) Handle(command Command) {
-	commandBus.handlers[reflect.TypeOf(command).String()].Handle(command)
+func (commandBus *SimpleCommandBus) Handle(command Command) error {
+	return commandBus.handlers[reflect.TypeOf(command).String()].Handle(command)
 }

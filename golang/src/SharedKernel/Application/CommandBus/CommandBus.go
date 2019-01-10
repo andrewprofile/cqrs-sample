@@ -1,9 +1,11 @@
 package CommandBus
 
-import . "../Command"
-import . "../Command/Handler"
+import (
+	. "../Command"
+	. "../Command/Handler"
+)
 
 type CommandBus interface {
 	RegisterHandler(command Command, handler Handler)
-	Handle(command Command)
+	Handle(command Command) error
 }
