@@ -12,7 +12,7 @@ class InMemoryUsers : Users
         this.users[user.Email()] = user;
     }
 
-    bool exist(string email)
+    bool exists(string email)
     {
         if (email in this.users)
         {

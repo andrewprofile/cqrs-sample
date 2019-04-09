@@ -19,7 +19,7 @@ class CreateUserHandler : Handler
     void handle(Command command)
     {
         CreateUserCommand createUserCommand = cast(CreateUserCommand) command;
-        if (users.exist(createUserCommand.Email()))
+        if (users.exists(createUserCommand.Email()))
         {
             throw new Exception("Current user exists");
         }
