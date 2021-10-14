@@ -13,15 +13,15 @@ class SimpleCommandBus implements CommandBus
     /**
      * @var Handler[]
      */
-    private $handlers;
+    private array $handlers;
 
     public function registerHandler(Command $command, Handler $handler): void
     {
-        $this->handlers[get_class($command)] = $handler;
+        $this->handlers[$command::class] = $handler;
     }
 
     public function handle(Command $command): void
     {
-        $this->handlers[get_class($command)]->handle($command);
+        $this->handlers[$command::class]->handle($command);
     }
 }

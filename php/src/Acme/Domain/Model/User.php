@@ -5,43 +5,24 @@ declare(strict_types=1);
 namespace Acme\Domain\Model;
 
 use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 class User
 {
-    /**
-     * @var Uuid
-     */
-    private $id;
 
-    /**
-     * @var string
-     */
-    private $email;
+    private UuidInterface $id;
 
-    /**
-     * @var string
-     */
-    private $password;
+    private string $email;
 
-    /**
-     * @var string
-     */
-    private $firstName;
+    private string $password;
 
-    /**
-     * @var string
-     */
-    private $lastName;
+    private string $firstName;
 
-    /**
-     * @var \DateTimeImmutable
-     */
-    private $createdAt;
+    private string $lastName;
 
-    /**
-     * @var \DateTimeImmutable
-     */
-    private $updatedAt;
+    private \DateTimeImmutable $createdAt;
+
+    private \DateTimeImmutable $updatedAt;
 
 
     /**
@@ -57,7 +38,7 @@ class User
         $this->createdAt = new \DateTimeImmutable();
     }
 
-    public function id(): Uuid
+    public function id(): UuidInterface
     {
         return $this->id;
     }

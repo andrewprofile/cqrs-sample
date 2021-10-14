@@ -3,7 +3,7 @@
     "description": "Sample of CQRS",
     "type": "project",
     "require": {
-        "php": "^7.1",
+        "php": "^8.0",
         "ramsey/uuid": "^3.8"
     },
     "license": "MIT",

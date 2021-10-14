@@ -12,7 +12,7 @@ class InMemoryUsers implements Users
     /**
      * @var User[]
      */
-    private $users;
+    private array $users;
 
     public function add(User $user): void
     {

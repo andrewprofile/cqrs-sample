@@ -12,10 +12,7 @@ use SharedKernel\Application\Command\Handler\Handler;
 
 class CreateUserHandler implements Handler
 {
-    /**
-     * @var Users
-     */
-    private $users;
+    private Users $users;
 
     public function __construct(Users $users)
     {
@@ -25,12 +22,8 @@ class CreateUserHandler implements Handler
     /**
      * @throws \Exception
      */
-    public function handle(Command $command): void
+    public function handle(CreateUserCommand|Command $command): void
     {
-        if (!($command instanceof CreateUserCommand)) {
-            throw new \RuntimeException('Invalid command type');
-        }
-
         if ($this->users->exists($command->email())) {
             throw new \InvalidArgumentException('Current user exists');
         }
