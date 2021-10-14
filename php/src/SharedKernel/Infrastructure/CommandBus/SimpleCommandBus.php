@@ -11,7 +11,7 @@ use SharedKernel\Application\CommandBus\CommandBus;
 class SimpleCommandBus implements CommandBus
 {
     /**
-     * @var Handler[]
+     * @var Handler<string>
      */
     private array $handlers;
 
