@@ -5,7 +5,6 @@ use Ramsey\Uuid\UuidInterface;
 
 class User
 {
-
     private UuidInterface $id;
 
     private string $email;
