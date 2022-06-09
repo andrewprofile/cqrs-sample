@@ -1,0 +1,18 @@
+{
+  "name": "andrewprofile/cqrs-sample",
+  "description": "Sample of CQRS",
+  "type": "project",
+  "require": {
+    "hhvm/hsl": "^4.108",
+    "hhvm/hhvm-autoload": "^3.3",
+    "ramsey/uuid": "^3.8"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrzej Kostrzewa",
+      "email": "andkos11@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
