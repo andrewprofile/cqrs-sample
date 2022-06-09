@@ -1,0 +1,23 @@
+{
+    "name": "andrewprofile/cqrs-sample",
+    "description": "Sample of CQRS",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "ramsey/uuid": "^3.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrzej Kostrzewa",
+            "email": "andkos11@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "src/Acme",
+            "SharedKernel\\": "src/SharedKernel"
+        }
+    }
+}
